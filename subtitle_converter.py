@@ -2,6 +2,8 @@ import os
 import tkinter as tk
 from tkinter import ttk, filedialog, messagebox
 
+__version__ = "1.0.0"
+
 try:
     from tkinterdnd2 import DND_FILES, TkinterDnD
 
@@ -22,7 +24,7 @@ except ImportError:
 class SubtitleConverterApp:
     def __init__(self, root):
         self.root = root
-        self.root.title("字幕繁简转换工具")
+        self.root.title(f"字幕繁简转换工具 v{__version__}")
         self.root.geometry("600x450")
 
         # 初始化转换器
